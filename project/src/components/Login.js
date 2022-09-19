@@ -8,10 +8,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Avatar from "@mui/material/Avatar";
-import { createAvatar } from "@dicebear/avatars";
-import * as style from "@dicebear/big-smile";
 
 function Login() {
   return (
@@ -24,9 +21,10 @@ function Login() {
           alignItems: "center",
         }}
       >
-        <Avatar src="let svg = createAvatar(style, {seed: 'custom-seed'});">
-          {/* <LockOutlinedIcon /> */}
-        </Avatar>
+        <Avatar
+          src="https://avatars.dicebear.com/api/big-smile/:seed.svg"
+          sx={{ width: 70, height: 70 }}
+        ></Avatar>
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
