@@ -12,7 +12,7 @@ import Avatar from "@mui/material/Avatar";
 
 function Login() {
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="sm">
       <Box
         sx={{
           marginTop: 8,
@@ -26,7 +26,7 @@ function Login() {
           sx={{ width: 70, height: 70 }}
         ></Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          어서와서 당신의 동물을 자랑해주세요 !
         </Typography>
 
         <TextField
@@ -49,7 +49,7 @@ function Login() {
         />
         <FormControlLabel
           control={<Checkbox value="remember" color="primary" />}
-          label="Rememeber me"
+          label="당신을 기억할게요 :)"
         />
         <Button
           variant="contained"
@@ -62,10 +62,10 @@ function Login() {
 
         <Grid container>
           <Grid item xs>
-            <Link>Forgot password?</Link>
+            <Link>비밀번호를 잊으셨나요?</Link>
           </Grid>
           <Grid item>
-            <Link>Sign Up</Link>
+            <Link>처음이시군요!</Link>
           </Grid>
         </Grid>
       </Box>
