@@ -140,10 +140,10 @@ export default function Login() {
           </LoadingButton>
           <Grid container>
             <Grid item xs>
-              <Link>비밀번호를 잊으셨나요?</Link>
+              <Link style={{ cursor: "pointer" }}>비밀번호를 잊으셨나요?</Link>
             </Grid>
             <Grid item>
-              <Link>처음이시군요!</Link>
+              <Link style={{ cursor: "pointer" }}>처음이시군요!</Link>
             </Grid>
           </Grid>
         </Box>
