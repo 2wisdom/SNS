@@ -98,16 +98,32 @@ export default function Login() {
             }}
           />
 
-          <TextField
-            label="Password"
+          <Controller
+            control={control}
             name="password"
-            type="password"
-            autoComplete="current-password"
-            margin="normal"
-            fullWidth
-            helperText="비밀번호를 알려주세요!"
-            error
+            defaultValue=""
+            rules={{
+              required: {
+                value: true,
+                message: "비밀번호를 입력해주세요!",
+              },
+            }}
+            render={({ field, fieldState: { error } }) => {
+              return (
+                <TextField
+                  label="Password"
+                  type="password"
+                  autoComplete="current-password"
+                  margin="normal"
+                  fullWidth
+                  {...field}
+                  error={!!error?.message}
+                  helperText={error?.message}
+                />
+              );
+            }}
           />
+
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="당신을 기억할게요 :)"
