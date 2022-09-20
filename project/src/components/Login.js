@@ -41,20 +41,21 @@ export default function Login() {
       clearErrors();
       alert("로그인이 완료되었습니다!");
     } catch (e) {
-      // TODO: 실패시
-      alert("로그인에 실패하였습니다.");
-
-      // 아이디랑, 비밀번호가 다름
-      // setError("email", {
-      //   type: "required",
-      //   message: "아이디 또는 비밀번호가 달라요!",
-      // });
+      // TODO: 실패시;
+      setError("email", {
+        type: "required",
+        message: "아이디 또는 비밀번호가 달라요!",
+      });
+      setError("password", {
+        type: "required",
+        message: "아이디 또는 비밀번호가 달라요!",
+      });
       return;
     }
   });
 
   return (
-    <Container component="main" maxWidth="sm">
+    <Container component="main" maxWidth="xs">
       <form onSubmit={onSubmit}>
         <Box
           sx={{
@@ -68,7 +69,7 @@ export default function Login() {
             src="https://avatars.dicebear.com/api/big-smile/:seed.svg"
             sx={{ width: 70, height: 70 }}
           />
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h6">
             어서와서 당신의 동물을 자랑해주세요 !
           </Typography>
 
