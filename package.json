@@ -1,7 +1,16 @@
 {
-  "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@mui/material": "^5.10.6"
-  }
+  "name": "SNS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/2wisdom/SNS.git",
+  "author": "Lizzie <leejihye7117@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.3",
+  "scripts": {
+    "dev": "yarn workspaces foreach -pAvi run dev"
+  },
+  "workspaces": [
+    "project",
+    "backend"
+  ]
 }
