@@ -1,9 +1,16 @@
-const app = require("express")();
-const bodyParser = require("body-parser");
-const cors = require("cors");
+import express, { application } from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
+import loginRouter from "./routes/login";
+import useRouter from "./routes/user";
+import dbConnectMiddleware from "./middlewares/dbConnect.middleware";
+
+const app = express();
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(dbConnectMiddleware);
 
 app.get("/api", (req, res) => {
   res.send({
@@ -11,18 +18,6 @@ app.get("/api", (req, res) => {
   });
 });
 
-app.post("/api/login", (req, res) => {
-  const { email, password } = req.body;
+app.use([loginRouter, useRouter]);
 
-  if (email !== "test@email.com" || password !== "1234") {
-    return res.status(400).send({
-      success: false,
-    });
-  }
-
-  res.send({
-    success: true,
-  });
-});
-
-module.exports = app;
+export default app;
