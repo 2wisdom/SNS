@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import Link from "@mui/material/Link";
+// import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 
 function SignUp() {
@@ -88,7 +89,7 @@ function SignUp() {
 
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="./Login" variant="body2">
+                <Link to="/" variant="body2">
                   이미 아이디가 있으신가요?
                 </Link>
               </Grid>

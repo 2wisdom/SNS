@@ -1,14 +1,15 @@
 import React from "react";
+import { useForm, Controller } from "react-hook-form";
+import { Link } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Link from "@mui/material/Link";
+// import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import { useForm, Controller } from "react-hook-form";
 import LoadingButton from "@mui/lab/LoadingButton";
 import Api from "../api/Api";
 
@@ -140,10 +141,14 @@ export default function Login() {
           </LoadingButton>
           <Grid container>
             <Grid item xs>
-              <Link style={{ cursor: "pointer" }}>비밀번호를 잊으셨나요?</Link>
+              <Link to="/" variant="body2">
+                비밀번호를 잊으셨나요?
+              </Link>
             </Grid>
             <Grid item>
-              <Link style={{ cursor: "pointer" }}>처음이시군요!</Link>
+              <Link to="/SignUp" variant="body2">
+                처음이시군요!
+              </Link>
             </Grid>
           </Grid>
         </Box>
