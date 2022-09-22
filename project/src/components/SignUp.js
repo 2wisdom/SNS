@@ -7,17 +7,23 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 // import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
+import { client } from "../api/Api";
 
 function SignUp() {
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const data = new FormData(event.currentTarget);
+    // const data = new FormData(event.currentTarget);
 
-    console.log({
-      email: data.get("email"),
-      password: data.append("password"),
+    const { data } = await client.post(`/api/user/register`, {
+      email: "thtjwls@gmail.com",
+      password: "1234",
     });
+
+    // console.log({
+    //   email: data.get("email"),
+    //   password: data.append("password"),
+    // });
   };
   return (
     <Container component="main" maxWidth="xs">
