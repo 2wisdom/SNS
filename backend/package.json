@@ -3,8 +3,7 @@
   "packageManager": "yarn@3.2.3",
   "description": "backend project",
   "scripts": {
-    "dev": "nodemon",
-    "build": ""
+    "dev": "nodemon"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
